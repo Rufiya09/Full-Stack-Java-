@@ -1,0 +1,654 @@
+What is classloader ?
+Class loader subsystem will load the .class file into java stack and later sufficient
+memory will be allocated for all the properties of the java program into following five
+memory locations.
+· Heap area
+· Method area
+· Java stack
+· PC register
+· Native stack
+
+What is Main aim of JIT Compiler ?
+The main aim of JIT compiler is to speed up the execution of java program.
+
+
+Constructor:
+===========
+Why use constructor ?
+The main purpose of create a constructor is, for placing user defined values in place of
+default values.
+
+Why constructor not return any value ?
+Constructor will never return any value even void, because the basic aim constructor
+is to place value in the object
+
+What is Wrapper Classes ?
+For each and every fundamental data type there exist a pre-defined class, Such
+predefined class is known as wrapper class.
+
+
+
+Which access specifier are called universal access specifier ?
+
+Public
+
+Which access specifier is not a keyword ?
+Default
+
+Which access specifier is package level access specifier ?
+Default
+
+
+
+Scope of protected specifier ?
+protected members of class is accessible within the same class and other class of same
+package and also accessible in inherited class of other package.
+
+Scope of private access specifier ?
+
+private members of class in not accessible any where in program these are only
+accessible within the class. private are also called class level access specifier.
+
+
+
+
+
+String class:
+===========
+1)The data which enclosed within double                                                              
+quote (" ") is by default treated as String
+class.
+
+2) String class object is immutable 
+
+3)When we create an object of String class
+by default no additional character
+memory space is created.
+
+
+String Buffer:-
+============
+
+1)The data which enclosed within double
+quote (" ") is not by default treated as
+StringBuffer class
+
+2)StringBuffer class object is mutable
+
+
+3)When we create an object of StringBuffer
+class by default we get 16 additional
+character memory space.
+
+
+
+Note:-
+=====
+== Operator is always used for comparing references of both source and destination
+objects but not their contents
+
+
+
+When we use String, StringBuffer and StringBuilder
+============================================
+· If the content is fixed and would not change frequently then we use String.
+· If content is not fixed and keep on changing but thread safety is required then we use
+StringBuffer
+· If content is not fixed and keep on changing and thread safety is not required then we
+use StringBuilder
+
+
+Note:-
+========
+All the things between StringBuffer and StringBuilder are same only difference is
+StringBuffer is synchronized and StringBuilder is not synchronized
+
+
+
+What is StringTokenizer ?
+It is a pre defined class in java.util package can be used to split the given string into
+tokens (parts) based on delimiters (any special symbols or spaces).
+
+
+
+What is Exception Handling ?
+The process of converting system error messages into user friendly error message is
+known as Exception handling.
+
+
+What is Exception ?
+An exception is an event, which occurs during the execution of a program, that
+disrupts the normal flow of the program's Instructions.
+
+
+
+Difference between Error and Exception
+
+Error:
+=====
+Can be handle.
+
+Example:
+--------------
+NoSuchMethodError
+OutOfMemoryError
+
+Exception:
+=========
+Can not be handle.
+
+Example:
+--------------
+ClassNotFoundException
+NumberFormateException
+Can any try block contain another try block ?
+Yes, One try block can contains another try block that is nested or inner try block can
+be possible.
+
+
+
+When IOException is thrown ?
+IOException is thrown in following conditions which is given below;
+· Try to transfer more data but less data are present.
+· Try to read data which is corrupted
+· Try to write but file is read only.
+
+When ArithmeticException is thrown ?
+The ArithmeticException is thrown when integer is divided by zero or taking the
+remainder of a number by zero. It is never thrown in floating-point operations.
+
+
+Difference between throw and throws ?
+
+throw 
+----------
+1)throw is a keyword used for hitting
+and generating the exception which
+are occurring as a part of method body
+
+
+2)The place of using throw keyword is
+always as a part of method body.
+
+
+
+throws
+-------------
+
+
+1)throws is a keyword which gives an indication
+to the specific method to place the common
+exception methods as a part of try and catch
+block for generating user friendly error
+messages
+
+2)The place of using throws is a keyword is
+always as a part of method heading
+
+
+
+
+
+Checked Exception:
+=====================
+checked Exception are checked at compile time
+
+e.g.
+IOException, SQLException,
+FileNotFoundException etc.
+
+
+Un-Checked Exception:-
+=====================
+un-checked Exception are checked at run time
+
+e.g.
+ArithmeticException, NullPointerException,
+ArrayIndexOutOfBoundsException,
+NumberNotFoundException etc.
+
+
+
+
+
+
+
+What is thread ?
+
+**Thread is a lightweight components and it is a flow of control. In other words a flow of
+control is known as thread.
+
+What is multithreading ?
+**Multithreading in java is a process of executing multiple threads simultaneously.
+
+
+
+
+State of a thread are classified into five types they are
+· New State
+· Ready State
+· Running State
+· Waiting State
+· Halted or dead State
+
+
+
+
+
+How to achieve multithreading in java ?
+In java language multithreading can be achieve in two different ways.
+· Using thread class
+· Using Runnable interface
+
+
+
+
+In which state no memory is available for thread ?
+If the thread is in new or dead state no memory is available but sufficient memory is
+available if that is in ready or running or waiting state
+
+
+Difference between sleep() and suspend() ?
+
+Sleep() can be used to convert running state to waiting state and automatically thread
+======
+convert from waiting state to running state once the given time period is completed.
+
+
+suspend() can be used to convert running state thread to waiting state but it
+=========
+will never return back to running state automatically.
+
+
+
+What is Thread Synchronization ?
+Allowing only one thread at a time to utilized the same resource out of multiple
+threads is known as thread synchronization or thread safe.
+
+
+
+
+Why use Thread Synchronization ?
+Whenever multiple threads are trying to use same resource than they may be chance
+to of getting wrong output, to overcome this problem thread synchronization can be
+used.
+
+
+
+
+How to achieve Thread Synchronization in java ?
+In java language thread synchronization can be achieve in two different ways.
+· Synchronized block
+· Synchronized method
+
+
+
+
+
+
+
+ this keyword:-
+===============
+The main purpose of using this keyword is to differenciate the formal parameter and
+data members of class, whenever the formal parameter and data members of the class
+are similar then jvm get ambiguty (no clearity between formal parameter and member
+of the class)
+
+To differenciate between formal parameter and data member of the class, the data
+member of the class must be preceded by "this".
+
+When Need of super keyword ?
+
+Whenever the derived class is inherits the base class features, there is a possibility
+that base class features are similar to derived class features and JVM gets an
+ambiguity. 
+
+In order to differentiate between base class features and derived class
+features must be preceded by super keyword.
+
+
+
+What is the difference between this. (this dot) and this() (this off).
+
+**this. can be used to differentiate variable of class and formal parameters of method or
+constructor.
+
+**this() can be used to call one constructor within the another constructor without
+creation of objects multiple time for the same class.
+
+
+
+
+what is difference between super and this keyword
+Super class is always pointing to base/super/parent class features and this keyword is always
+pointing to current class features.
+
+What is difference between super(), super(..), this() and this(..).
+
+===>super() and super(..) are used for establishing the communication between base class
+         and derived class constructor.
+
+===>this() and this(...) are used for establishing the communication between current class
+constructor.
+
+
+Why abstract class not made as final ?
+Abstract classes definitions should not be made as final because abstract classes
+always participate in inheritance classes.
+
+
+
+
+**Main advantage of Synchronized keyword ?
+The main advantage of Synchronized keyword is we can resolve data inconsistency
+problem.
+
+**The main dis-advantage of Synchronized keyword ?
+The main dis-advantage of Synchronized keyword is it increased the waiting time of
+thread and effect performance of the system, Hence if there is no specific requirement
+it is never recommended to use synchronized keyword.
+
+
+
+What is Inheritance ?
+The process of obtaining the data members and methods from one class to another
+class is known as inheritance. It is one of the fundamental features of object-oriented
+programming.
+
+
+
+
+How many type of inheritance are allow in java ?
+In Java following inheritance are allow;
+· Single inheritance
+· Multilevel inheritance
+· Hierarchical inheritance
+· Hybrid inheritance
+
+
+
+
+
+What is interface ?
+Interface is similar to class which is collection of public static final variables
+(constants) and abstract methods.
+
+Why use interface in java ?
+In java interface are used for achieve multiple inheriatance.
+
+Can an Interface extend another Interface?
+Yes an Interface can inherit another Interface.
+
+How interface is similar to class ?
+Whenever we compile any Interface program it generate .class file. That means the
+
+bytecode of an interface appears in a .class file.
+
+Interface:-
+===========
+we cannot instantiate an interface.
+· An interface does not contain any constructors.
+· All methods in an interface are abstract.
+· An interface cannot contain instance fields. Interface only contains public static final
+variables.
+· An interface is can not extended by a class; it is implemented by a class.
+· An interface can extend multiple interfaces. That means interface support multiple
+inheritance
+
+Difference between abstract class and concrete class ?
+
+
+Difference between Abstract and Interface ?
+
+
+Difference between Overloading and Overriding ?
+
+
+
+collections:-
+===========
+java.util.*;
+java.io.*;
+java.
+
+
+
+
+What is the benefit of Generics in Collections Framework?
+
+
+What is different between Iterator and ListIterator?
+
+Comprable:-
+===========
+Comparable interface is used to provide the natural sorting of objects and we can use it to provide sorting based on single logic.
+
+Comparator :-
+=============
+interface is used to provide different algorithms for sorting and we can chose the comparator we want to use to sort the given collection of objects.
+
+
+
+
+1) Can abstract class have constructors in Java?
+Yes, an abstract class can declare and define a constructor in Java. Since you can not create an instance of an abstract class, a constructor can only be called during constructor chaining, i.e. when you create an instance of the concrete implementation class. 
+
+Now some interviewer, ask what is the purpose of a constructor, if you can not instantiate abstract class? Well, it can still be used to initialize common variables, which are declared inside an abstract class, and used by the various implementation. 
+
+Also even if you don’t provide any constructor, the compiler will add default no-argument constructor in an abstract class, without that your subclass will not compile, since the first statement in any constructor implicitly calls super(), default superclass constructor in Java.
+
+
+
+2) Can abstract class implements interface in Java? do they require to implement all methods?
+
+ 
+Yes, an abstract class can implement an interface by using the implements keyword. Since they are abstract, they don’t need to implement all methods. It’s good practice to provide an abstract base class, along with an interface to declare Type. One example of this is java.util.List interface and corresponding java.util.AbstractList abstract class. 
+
+Since AbstractList implements all common methods,  concrete implementations like LinkedList and ArrayList are free from the burden of implementing all methods, had they implemented List interface directly. 
+
+It’s best of both worlds, you can get the advantage of interface for declaring type, and flexibility of abstract class to implement common behavior in one place. Effective Java has a nice chapter on how to use interface and abstract class in Java, which is worth reading.
+
+
+
+
+3) Can an abstract class be final in Java?
+No, an abstract class can not be final in Java. Making them final will stop the abstract class from being extended, which is the only way to use an abstract class. They are also opposite of each other, abstract keyword enforces to extend a class, for using it, on the other hand, final keyword prevents a class from being extended. In real world also, abstract signifies incompleteness, while final is used to demonstrate completeness. Bottom line is, you can not make your class abstract and final in Java, at same time, it’s a compile time error.
+
+
+
+4) Can abstract class have static methods in Java?
+Yes, an abstract class can declare and define static methods, nothing prevents from doing that. But, you must follow guidelines for making a method static in Java, as it’s not welcomed in a object oriented design, because static methods can not be overridden in Java. It’s very rare, you see static methods inside abstract class, but as I said, if you have very good reason of doing it, then nothing stops you.
+
+
+
+5) Can you create an instance of abstract class?
+No, you can not create instance of abstract class in Java, they are incomplete. Even though, if your abstract class don’t contain any abstract method, you can not create instance of it. By making a class abstract,  you told compiler that, it’s incomplete and should not be instantiated. Java compiler will throw error, when a code tries to instantiate abstract class.
+
+
+
+6) Is it necessary for an abstract class to have an abstract method?
+
+ 
+No, It’s not mandatory for an abstract class to have any abstract method. You can make a class abstract in Java, by just using abstract keyword in class declaration. Compiler will enforce all structural restriction, applied to abstract class, e.g. now allowing to create any instance. By the way, it’s debatable whether you should have abstract method inside abstract class or interface. In my opinion, abstract class should have abstract methods, because that’s the first thing programmer assumes, when he see that class. That would also go nicely along principle of least surprise.
+
+
+
+7) Difference between abstract class and interface in Java?
+This is the most important and one of the classic Java Interview question. I don’t know, how many times I have seen this question at all most all levels of Java interviews. One reason, which makes this question interesting is the ability to produce example. It’s easy to answers questions on core OOPS concepts like Abstraction, Encapsulation, Polymorphism and Inheritance, but when it comes to subtle points like this, candidate more often fumbled. You can see this post for all syntactical difference between abstract class and interface, but it deserve a post on it’s own.
+
+
+
+8) When do you favor abstract class over interface?
+This is the follow-up of previous interview questions on abstract class and interface. If you know syntactical difference, you can answer this question quite easily, as they are the one, which drives the decision. Since it’s almost impossible to add a new method on a published interface, it’s better to use abstract class, when evolution is concern. Abstract class in Java evolves better than interface. Similarly, if you have too many methods inside interface, you are creating pain for all it’s implementation, consider providing an abstract class for default implementation. This is the pattern followed in Java collection package, you can see AbstractList provides default implementation for List interface.
+
+
+
+9) What is abstract method in Java?
+An abstract method is a method without body. You just declare method, without defining it and use abstract keyword in method declaration.  All method declared inside Java Interface are by default abstract. Here is an example of abstract method in Java
+
+                public void abstract printVersion();
+
+Now, In order to implement this method, you need to extend abstract class and override this method.
+
+
+
+10) Can abstract class contains main method in Java ?
+Yes, abstract class can contain main method, it just another static method and you can execute Abstract class with main method, until you don’t create any instance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*********************************************************************************************
+
+
+
+
+.
+
+1 .  class Demo
+{
+   static String s=NULL;
+   public static void main(String [] args)
+{    
+    System.out.println(Demo.s);
+   }
+}
+a.NullPointerException 
+b.compiler Error
+3.null
+4.(Empty space)
+
+2.   interface I1 {
+       Static int a=100;
+      Static void  m1();
+}
+Class implements I1
+{
+Public void m1()
+{
+System.out.println("In m1 method")}
+}
+a.In m1 method 
+b.compiler error
+c.Runtime error
+
+
+3. Predict the output of following Java program
+class Main {
+   public static void main(String args[]) {
+      try {
+         throw 10;
+      }
+      catch(int e) {
+         System.out.println("Got the  Exception " + e);
+      }
+  }
+}
+(A) Got the Exception 10
+(B) Got the Exception 0
+(C) Compiler Error
+
+
+
+
+4.  In which statements we use positional parameters ?
+a. statement   b. PreparedStatement   c. Collable Statement   d.  b,c   e.  all
+
+
+5.Which method  to achieve Userdefined transaction?
+a.setAutoCommit(true)  b. .setAutoCommit(false)    c. commit() d.  rolllback()
+6.In method Overloading is done based on?
+a. method prototype     b. Method signature    c. Method parameters     d. All of above
+
+7.How many types of resultset are there?
+      a. 1    b. 2  c. 3  d.4
+8.If you use execute() with select query will we get an error
+a. true   b. false
+9.what is Access Modifiers? List Out Access Modifiers in java with its purpose and      applicability?
+
+
+11.What will be the output of the program?
+try {
+int x = 0;
+ int y = 5 / x; } 
+catch (Exception e) {
+
+System.out.println("Exception");}
+
+catch (ArithmeticException ae){
+
+System.out.println(" Arithmetic Exception");
+}
+ System.out.println("finished");
+A.
+finished
+B.
+Exception
+C.
+Compilation fails.
+D.
+Arithmetic Exception
+
+12.Which of these is a process of converting a simple String type into a int type?
+a. type wrapping                                    b. type conversion
+c. type casting                                       d. None of the Mentioned.
+
+13.super class for the Throwable class____________.
+
+14. In which package OracleDiver class resides?
+a. jdbc.oracle.driver                               b. oracle.driver.jdbc
+c. oracle.jdbc.driver                               d. driver.jdbc.oracle
+
+
+
+
+16. Can we declare a inner class as private? yes/no
+
+17.Can an abstract class be final? yes/no
+
+18.Can we skip finally block while execution ? yes/no
+
+19.By default Interface methods are ____________.
+
+20. List out two checked and two unchecked Exceptions ?
+
+21.To create a user defined Exception we have to override __________.
+
+22.Can we create object for  abstract class ? yes/no
+
+23.What is the return type of executeBatch()_______.
+
+24.List out the differences b/w TreeSet and HashSet?
+
+25.List out Five collection frame work interfaces?
+
+26.Write the url which resides in getConnection()?
+
+27.How to call base class static  method ____________.
+
+28. List out the static methods in multithreading?
+
+29.List out the steps to connect database through java?
+
+30.To define a run() we need to implement __________Interface. 
+
